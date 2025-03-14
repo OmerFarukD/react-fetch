@@ -1,10 +1,11 @@
 import './App.css'
 
 import Header from "./components/Header.jsx";
-import TeamsPage from "./pages/TeamsPage.jsx";
+import TeamsPage from "./pages/teams/TeamsPage.jsx";
 import {Route, Routes} from "react-router";
 import HomePage from "./pages/HomePage.jsx";
-import PlayersPage from "./pages/PlayersPage.jsx";
+import PlayersPage from "./pages/players/PlayersPage.jsx";
+import PlayerDetails from "./pages/players/PlayerDetails.jsx";
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
                 <Route index element={<HomePage/>}/>
                 <Route path="/teams" element={<TeamsPage/>}/>
                 <Route path="/players" element={<PlayersPage/>}/>
+                <Route path="/players/:id" element={<PlayerDetails/>}/>
 
             </Routes>
 

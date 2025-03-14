@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import {Link} from "react-router";
 
 function PlayersPage() {
 
@@ -21,6 +22,7 @@ function PlayersPage() {
                     <th scope="col">Takım Adı</th>
                     <th scope="col">Mevki</th>
                     <th scope="col">Numara</th>
+                    <th scope="col">Detaya Git</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -32,6 +34,9 @@ function PlayersPage() {
                             <td>{item.teamName}</td>
                             <td>{item.position}</td>
                             <td>{item.number}</td>
+                            <td>
+                                <Link to={`/players/${item.id}`}>Detaya Git</Link>
+                            </td>
 
                         </tr>
                     ))
