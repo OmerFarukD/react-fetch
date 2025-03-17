@@ -20,6 +20,7 @@ function TeamsPage(props) {
                 <tr>
                     <th scope="col">Id</th>
                     <th scope="col">Takım Adı</th>
+                    <th scope="col">Detaya Git</th>
 
                 </tr>
                 </thead>
@@ -29,6 +30,10 @@ function TeamsPage(props) {
                         <tr>
                             <th scope="row">{team.id}</th>
                             <td>{team.name}</td>
+                            <td><Link className={"btn btn-outline-secondary"} to={`/teams/${team.id}`}>Detaya Git <i
+                                className="bi bi-info-circle-fill"></i>
+                            </Link>
+                            </td>
 
                         </tr>
                     ))

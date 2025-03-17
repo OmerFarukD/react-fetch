@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {Link} from "react-router";
+import AddFormLinkButton from "../../components/AddFormLinkButton.jsx";
 
 function PlayersPage() {
 
@@ -13,6 +14,8 @@ function PlayersPage() {
 
     return (
         <>
+
+            <AddFormLinkButton url={'/player/add'}/>
 
             <table className="table table-secondary table-striped table-hover">
                 <thead>

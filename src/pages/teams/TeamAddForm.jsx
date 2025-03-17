@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
 import axios from "axios";
 import {Link, useNavigate} from "react-router";
+import AddFormButton from "../../components/AddFormButton.jsx";
+import GoToHomeButton from "../../components/GoToHomeButton.jsx";
 
 function TeamAddForm(props) {
-
     const  navigate = useNavigate();
 
     const url = "http://localhost:5026/api/Teams/add"
@@ -39,13 +40,8 @@ function TeamAddForm(props) {
                         type="text"
                         className="form-control"/>
                 </div>
-                <button type="submit" className="btn btn-outline-success">Ekle
-                    <i className="bi bi-plus-square-fill mx-1"></i>
-                </button>
-
-                <Link to={'/teams'} className={"btn btn-outline-primary mx-2"}>
-                    Anasayfaya git <i className="bi bi-house"></i>
-                </Link>
+                <AddFormButton/>
+                <GoToHomeButton url={'/teams'}/>
             </form>
 
     </div>);
